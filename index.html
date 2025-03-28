@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!----------------- Header ---------------->
+    <div class="header">
+      <div class="search-bar">
+            <div class="search">
+                <input type="search" id="search-input" placeholder="Search" />
+                <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>       
+      </div>
+      <div class="buttons">
+        <button class="switch-view button"></button>
+        <select class="sort button">
+          <option value="" disabled selected hidden>Sort By</option>
+          <option value="alphabet">Sort by Alphabet</option>
+          <option value="date">Sort by Published Date</option>
+        </select>
+      </div>
+    </div>
+
+
+    <!-------------------- Fetching Books ------------------->
+    <div id="loading-spinner" class="spinner hide"></div>
+
+    <div id="book-container">
+
+    </div>
+
+
+    <!-------------------- Pagination Buttons ---------------------->
+
+    <div class="pagination hide">
+      <button class="prev button"><i class="fa-solid fa-angle-left"></i></button>
+      <button class="current"></button>
+      <button class="next button"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/980736308b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
