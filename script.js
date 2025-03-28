@@ -31,7 +31,7 @@ async function fetchBooks() {
       const authors = book.volumeInfo.authors?.join(", ") ?? "";
       const publisher = book.volumeInfo.publisher ?? "";
       const publishedDate = book.volumeInfo.publishedDate ?? "";
-      const thumbnail = book.volumeInfo.imageLinks?.thumbnail ?? "https://www.secondhandbooksindia.com/img/not-found.jpg";
+      const thumbnail = book.volumeInfo.imageLinks?.thumbnail? book.volumeInfo.imageLinks.thumbnail.replace(/^http:/, "https:") : "https://www.secondhandbooksindia.com/img/not-found.jpg";
       const infoLink = book.volumeInfo.infoLink ?? "";
 
       return { title, authors, publisher, publishedDate, thumbnail, infoLink };
